@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Records | CliniQ</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #66c3f9;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 80px;
+            transition: max-height 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .nav-bar {
+            background-color: #66c3f9;
+            padding: 10px 0;
+            color: #fff;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-bar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-bar ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .nav-bar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 10px 15px;
+            display: block;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-bar ul li a:hover {
+            background-color: #001aff;
+            color: #fff;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-items: center;
+        }
+
+        section {
+            width: 100%;
+            max-width: 900px;
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }   
+
+        .section-header {
+            font-size: 2em;
+            color: #66c3f9;
+            border-bottom: 2px solid #66c3f9;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .form-container, .message-box {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .form-container h2, .message-box h3 {
+            margin-top: 0;
+            color: #66c3f9;
+        }
+
+        .form-container label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .form-container input, 
+        .form-container select, 
+        .form-container textarea, 
+        .form-container button {
+            display: block;
+            width: calc(100% - 22px); /* Adjust for padding */
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+
+        .form-container button {
+            background-color: #66c3f9;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #001aff;
+        }
+
+        .message-box {
+            margin-bottom: 0;
+        }
+
+        .message-box p {
+            margin: 10px 0;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            margin-top: auto; /* Pushes footer to the bottom of the page */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="Cliniq_logo.png" alt="CliniQ Logo">
+        </div>
+        <h1>CliniQ: The Smart Clinic Hub</h1>
+    </header>
+
+    <div class="nav-bar">
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="appointment scheduling.html">Appointment Scheduling</a></li>
+            <li><a href="prescription management.html">Prescription Management</a></li>
+            <li><a href="medical records.html">Medical Test Records</a></li>
+            <li><a href="billing.html">Billing System</a></li>
+            <li><a href="patient record.html">Patient Records</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section>
+            <div class="section-header">Patient Health Records</div>
+            <div class="form-container">
+                <h2>Integrate Your Personal Health Records</h2>
+                <p>Upload your health records from other providers to create a comprehensive health profile. This will allow for a complete view of your health history, enhancing diagnosis and treatment planning.</p>
+                <form action="upload-records.html" method="post" enctype="multipart/form-data">
+                    <label for="health-records">Upload Health Records:</label>
+                    <input type="file" id="health-records" name="health-records" accept=".pdf, .doc, .docx, .jpg, .png">
+                    <button type="submit">Upload Records</button>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">View Health History</div>
+            <div class="form-container">
+                <h2>Your Health History</h2>
+                <div class="message-box">
+                    <h3>Visit with Dr. John Doe</h3>
+                    <p><strong>Date:</strong> January 15, 2024</p>
+                    <p><strong>Diagnosis:</strong> Upper Respiratory Infection</p>
+                    <p><strong>Treatment:</strong> Prescribed medication and advised rest.</p>
+                </div>
+                <div class="message-box">
+                    <h3>Visit with Dr. Jane Smith</h3>
+                    <p><strong>Date:</strong> March 10, 2024</p>
+                    <p><strong>Diagnosis:</strong> Annual Check-up</p>
+                    <p><strong>Treatment:</strong> Routine examination, blood tests, and follow-up in 6 months.</p>
+                </div>
+                <!-- Add more records as needed -->
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">Secure Communication</div>
+            <div class="form-container">
+                <h2>Communicate with Your Doctor</h2>
+                <div class="message-box">
+                    <h3>Send a Message</h3>
+                    <form action="send-message.html" method="post">
+                        <label for="doctor-message">Message:</label>
+                        <textarea id="doctor-message" name="doctor-message" rows="6" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="message-box">
+                    <h3>Your Messages</h3>
+                    <p><strong>Message from Dr. John Doe:</strong> Your lab results are normal. No further action is needed at this time.</p>
+                    <p><strong>Message from Dr. Jane Smith:</strong> Your follow-up appointment is scheduled for September 15, 2024.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CliniQ. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript code for handling patient records and communication logic can be added here
+    </script>
+</body>
+
+</html>
